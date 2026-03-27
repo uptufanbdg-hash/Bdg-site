@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jai Club – Register & Get Started</title>
+<title>Jai Club Official</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #fff;
+  background: linear-gradient(135deg,#0f172a,#020617);
+  color: white;
   text-align: center;
 }
 
@@ -19,31 +19,49 @@ body {
 }
 
 h1 {
-  font-size: 28px;
   color: #22c55e;
+  font-size: 30px;
 }
 
-p {
-  font-size: 16px;
-  color: #ccc;
+.sub {
+  color: #cbd5f5;
+  margin-bottom: 20px;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 15px 25px;
+  padding: 16px 30px;
   background: #22c55e;
-  color: #000;
+  color: black;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 12px;
   text-decoration: none;
+  margin-top: 15px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.08);}
+  100% {transform: scale(1);}
 }
 
 .box {
   background: #1e293b;
-  margin: 20px;
   padding: 15px;
-  border-radius: 10px;
+  margin: 15px;
+  border-radius: 12px;
+}
+
+.timer {
+  color: #facc15;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.live {
+  color: #22c55e;
+  font-size: 14px;
 }
 </style>
 </head>
@@ -53,9 +71,13 @@ p {
 <div class="container">
 
 <h1>🚀 Jai Club Official</h1>
-<p>Join now and explore a simple & user-friendly platform.</p>
+<p class="sub">Join now & explore a simple and user-friendly platform</p>
 
-<a href="" class="http://jaiclub.app">👉 Register Now</a>
+<div class="timer">⏳ Offer Ending In: <span id="countdown">05:00</span></div>
+
+<a href="http://jaiclub.app" class="btn">👉 Register Now</a>
+
+<p class="live">🔥 127 people joined in last 10 minutes</p>
 
 <div class="box">
 <h3>✨ Features</h3>
@@ -65,4 +87,32 @@ p {
 </div>
 
 <div class="box">
+<h3>🎁 Why Choose Us?</h3>
+<p>✔ Smooth Experience</p>
+<p>✔ Quick Access</p>
+<p>✔ Mobile Friendly</p>
+</div>
+
+<a href="http://jaiclub.app" class="btn">🔥 Join Now</a>
+
+<div class="box">
+<h3>📲 Join Telegram</h3>
+<a href="https://t.me/yourusername" class="btn">Join Now</a>
+</div>
+
+</div>
+
+<script>
+let time = 300;
+setInterval(() => {
+  let min = Math.floor(time / 60);
+  let sec = time % 60;
+  document.getElementById("countdown").innerHTML =
+    `${min}:${sec < 10 ? "0" : ""}${sec}`;
+  if (time > 0) time--;
+}, 1000);
+</script>
+
+</body>
+</html>
 
