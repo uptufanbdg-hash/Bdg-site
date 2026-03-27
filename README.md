@@ -1,2 +1,2 @@
-# Bdg-site
-BDG Game Login, Register &amp; Info Website
+# JAI_ CLUB
+JAI CLUB Login, Register &amp; Info Website
